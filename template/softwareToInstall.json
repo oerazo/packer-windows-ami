@@ -1,0 +1,51 @@
+{
+    "config": {
+        "downloadLocation": "c:\\Software"
+     },
+    "software": [
+    {
+        "name": "Jdk",
+        "description" : "Java Development Kit 8u65",
+        "url": "http://download.oracle.com/otn-pub/java/jdk/8u65-b17/jdk-8u65-windows-x64.exe",
+        "arguments" : "/s REBOOT=ReallySuppress",
+        "path": null,
+        "cookie": "oraclelicense=accept-securebackup-cookie",
+        "downloadOnlyTo" : null,
+        "type" : null,
+        "executeAfter" : null
+    },
+    {
+        "name": "nodejs",
+        "description" : "Node Js",
+        "url": "https://nodejs.org/dist/v4.2.4/node-v4.2.4-x86.msi",
+        "arguments" : "/qn",
+        "path": null,
+        "cookie": null,
+        "downloadOnlyTo" : null,
+        "type" : null,
+        "executeAfter" : null
+    },
+    {
+        "name": "Git",
+        "description" : "Git for Windows",
+        "url": "https://github.com/git-for-windows/git/releases/download/v2.6.4.windows.1/Git-2.6.4-64-bit.exe",
+        "arguments" : "/qn /VerySilent",
+        "path": "C:\\Program Files\\Git\\cmd",
+        "cookie": null,
+        "downloadOnlyTo" : null,
+        "type" : null,
+        "executeAfter" : null
+    },
+    {
+        "name": "Awscli",
+        "description" : "Aws cli for Windows",
+        "url": "https://s3.amazonaws.com/aws-cli/AWSCLI64.msi",
+        "arguments" : "/qn",
+        "path": "C:\\Program Files\\Amazon\\AWSCLI",
+        "cookie": null,
+        "downloadOnlyTo" : null,
+        "type" : null,
+        "executeAfter" : null
+    }
+    ]
+}
