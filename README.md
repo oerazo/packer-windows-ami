@@ -7,22 +7,20 @@ You could use [chocolatey](https://chocolatey.org/) but if for some reason you d
 
 ## Dependencies
  - Install [packer](http://packer.io)
- - There should be a VPC in your AWS account
+ - There should be a default VPC in your AWS account, otherwise you have to indicate your vpc id which is also fine
  - Packer will authenticate to AWS using your exported AWS\* credentials or your ~/.aws/credentials file, do not set any credentials in files that are checked in your code repository.
 
 ## Usage
-There is a variables section inside the script that is used to define default variables:
+There is a variables section on top of the script that is used to define default variables:
 
 ```
 "variables": {
-  "admin_password": "",
   "base_ami_id": ""
 }
 ```
-If default values are present , they can be changed from the command line, this is how you provision a new AMI from the command line using packer:
+
+If default values are present, they can be overridden from the command line, this is how you provision a new AMI from the command line using packer:
 
 ```
-packer build -var "base_ami_id=ami-6c14310f" -var "admin_password=fairpass" provision-ami.json
+packer build -var "base_ami_id=ami-47bf8b24" provision-windows.json
 ```
-
-The admin_password variable is only used as an example in case you have your own policies around passwords and want to set your own, the packer script has a step to change the password at the very end.
